@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ish. remote</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="./css/remote.css" media="all"/>
+  <!-- Gridset CSS -->
+  <!--[if (!IE) | (gt IE 8)]><!--><link rel="stylesheet" href="./css/gridset.css" /><!--<![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="./css/gridset-ie-lte8.css" /><![endif]-->
+</head>
+<body>
+  <div id="page" class="page clearfix">
+    <section id="header" class="w-all m-all s-all clearfix" role="banner">
+      <h3 class="status">ish. <span class="status-out">viewport width</span></h3>
+    </section>
+
+    <section id="page-buttons" class="w-hide m-hide s-all clearfix">
+      <ul>
+        <li><button class="ish-btns selected sb1" data-display="ish-btns">btns</button></li>
+        <li><button class="knob sb2" data-display="knob">knob</button></li>
+        <li><button class="plusminus sb3" data-display="plusminus">-/+</button></li>
+      </ul>
+    </section>
+
+    <section id="display-area" class="w-all m-all s-all clearfix">
+      <section id="ish-btns" class="w1-w2 m1-m2 s-all clearfix display">
+        <div class="inner">
+          <button id="size-s" class="w1 m1 s1">small</button>
+          <button id="size-m" class="w2 m2 s2">medium</button>
+          <button id="size-l" class="w1 m1 s1">large</button>
+          <button id="size-random" class="w2 m2 s2">random</button>
+          <button id="size-disco" class="w1 m1 s1">disco</button>
+          <button id="size-hay" class="w2 m2 s2">hay</button>
+        </div>
+      </section>
+
+      <section id="knob" class="w3-w5 m-all s-all clearfix display">
+        <div class="inner">
+          <input type="text" value="0" class="dial" disabled="disabled">
+        </div>
+      </section>
+
+      <section id="plusminus" class="w6-w7 m4-m5 s-all clearfix display">
+        <div class="inner">
+          <button id="size-minus1px" class="w6 m4 s1">- 1px</button>
+          <button id="size-plus1px" class="w7 m5 s2">+ 1px</button>
+          <button id="size-minus1em" class="w6 m4 s1">- 1em</button>
+          <button id="size-plus1em" class="w7 m5 s2">+ 1em</button>
+          <button id="size-minus5em" class="w6 m4 s1">- 5em</button>
+          <button id="size-plus5em" class="w7 m5 s2">+ 5em</button>
+        </div>
+      </section>
+    </section>
+
+  </div>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/ish/js/fastclick.js"></script>
+  <script type="text/javascript" src="/ish/js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="/ish/js/enquire.min.js"></script>
+  <script type="text/javascript" src="/ish/js/jquery.knob.js"></script>
+  <script type="text/javascript" src="/ish/js/jquery.touchSwipe.min.js"></script>
+  <script type="text/javascript" src="/ish/js/remoteio.js"></script>
+  <script type="text/javascript" src="/ish/js/gridset-overlay.js"></script>
+</body>
+</html>

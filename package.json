@@ -1,0 +1,49 @@
+{
+  "name": "ishremote",
+  "description": "Drive Brad Frost's ish with your mobile device.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/uhunkler/ishremote",
+  "author": {
+    "name": "Urs Hunkler",
+    "email": "http://unodo.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uhunkler/ishremote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uhunkler/ishremote/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/uhunkler/ishremote/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/ishremote",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-less": "~0.8.3"
+  },
+  "keywords": [
+    "ish.",
+    "responsive",
+    "mobile",
+    "web",
+    "webdesign",
+    "webdevelopment"
+  ],
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "express": "~3.4.6",
+    "applescript": "~0.2.1",
+    "socket.io": "~0.9.16"
+  }
+}

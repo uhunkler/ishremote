@@ -1,0 +1,173 @@
+// variables
+// colors
+@white: #fff;
+@gray: #ccc;
+@blue: #2e7efb;
+@blueBrighter: #5696fb;
+@textcolor: #444;
+@textinverted: #fff;
+@btnbg: @white;
+@btnbgselected: @blue;
+@btnborder: @blue;
+@btnhover: #aaa;
+@bg: @white;
+
+// fonts
+@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// set the viewport width for IE
+@-ms-viewport {
+  width: device-width;
+}
+
+// general rules
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+body {
+  background-color: @bg;
+  color: @textcolor;
+  font-family: @font;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+body.off {
+  opacity: 0;
+}
+
+// style the outer button container
+.page {
+  background-color: @white;
+  font-size: 19px;
+  margin: 0 1%;
+  padding: 0;
+}
+
+// move the buttons to the page bottom on tablet sized devices
+// to bring theme in the range of the thumbs
+@media screen and (min-height: 32em) {
+  .page {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+  }
+}
+
+// move the buttons up on wide screens
+// it seams unlikely that wide screens are held in the hand
+// to use the remote
+@media screen and (min-width: 64.0625em) {
+  .page {
+    margin: 0 auto;
+    max-width: 64rem;
+    position: static;
+    width: auto;
+  }
+}
+
+// style the status bar at the top
+.status {
+  background-color: @btnbgselected;
+  color: @textinverted;
+  margin: .2em 0;
+  padding: 0 1px 0 .3em;
+}
+
+// style the ish. viewport size number display in the statusbar
+.status-out {
+  font-size: .9em;
+  font-weight: normal;
+  background-color: @white;
+  color: @textcolor;
+  padding: .1em .5em;
+}
+
+// basic button styles
+button {
+  // Try to remove the Android Firefox default button gradient,
+  // but the gradient is still there.
+  // ToDo: need a solution
+  background-image: none !important;
+//  background-color: @btnbg;
+  background: @btnbg;
+  border: 1px solid @btnborder;
+  font-family: @font;
+  font-size: 1em;
+  line-height: 4;
+  margin: .5em 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+
+  &:focus {
+    outline: none;
+  }
+  &.hovered {
+    background-color: @btnhover;
+  }
+}
+
+// on screens with little height reduce the button height
+@media screen and (max-height: 24.5em) {
+  button {
+    line-height: 2.6;
+  }
+}
+
+// style the page switch buttons used on small screens
+#page-buttons {
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  button {
+    background-color: @btnbg;
+    border-color: @btnborder;
+    line-height: 1.4;
+    padding: .5em 0;
+  }
+  .selected {
+    background-color: @btnbgselected;
+    color: @textinverted;
+  }
+}
+
+// special styles for the round slider element
+#knob {
+  height: 280px;
+
+  .inner {
+    margin: 1em auto 0;
+    width: 300px;
+  }
+  canvas {
+    // Turn standard touch behaviour off for IEs
+    // for the canvas to avoid for example page moves
+    -ms-touch-action: none;
+  }
+  input[type=text] {
+    opacity: 1;
+  }
+}

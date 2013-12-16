@@ -1,0 +1,119 @@
+@-ms-viewport {
+  width: device-width;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  background-color: #ffffff;
+  color: #444444;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+body.off {
+  opacity: 0;
+}
+.page {
+  background-color: #ffffff;
+  font-size: 19px;
+  margin: 0 1%;
+  padding: 0;
+}
+@media screen and (min-height: 32em) {
+  .page {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+  }
+}
+@media screen and (min-width: 64.0625em) {
+  .page {
+    margin: 0 auto;
+    max-width: 64rem;
+    position: static;
+    width: auto;
+  }
+}
+.status {
+  background-color: #2e7efb;
+  color: #ffffff;
+  margin: .2em 0;
+  padding: 0 1px 0 .3em;
+}
+.status-out {
+  font-size: .9em;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: #444444;
+  padding: .1em .5em;
+}
+button {
+  background-image: none !important;
+  background: #ffffff;
+  border: 1px solid #2e7efb;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 4;
+  margin: .5em 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+button:focus {
+  outline: none;
+}
+button.hovered {
+  background-color: #aaaaaa;
+}
+@media screen and (max-height: 24.5em) {
+  button {
+    line-height: 2.6;
+  }
+}
+#page-buttons ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#page-buttons li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#page-buttons button {
+  background-color: #ffffff;
+  border-color: #2e7efb;
+  line-height: 1.4;
+  padding: .5em 0;
+}
+#page-buttons .selected {
+  background-color: #2e7efb;
+  color: #ffffff;
+}
+#knob {
+  height: 280px;
+}
+#knob .inner {
+  margin: 1em auto 0;
+  width: 300px;
+}
+#knob canvas {
+  -ms-touch-action: none;
+}
+#knob input[type=text] {
+  opacity: 1;
+}
