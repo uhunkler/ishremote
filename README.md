@@ -3,7 +3,7 @@ Drive Brad Frost's [ish.](http://bradfrostweb.com/demo/ish/) with a HTML5 "remot
 
 ## Getting Started
 ### Installing via GitHub
-Install the git repository. Install the related node modules with `npm install`.
+Clone the git repository. Install the related node modules with `npm install`.
 
 Dependencies: [node.js](http://nodejs.org/) and several node modules and eventually [Grunt](http://gruntjs.com/) and [CoffeeScript](http://coffeescript.org/) to compile the config.coffee configuration with CoffeeScript. Grunt and CoffeeScript are not needed to use ish.remote.
 
